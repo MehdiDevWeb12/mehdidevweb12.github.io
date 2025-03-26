@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio de Mehdi Vieille</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="#" class="logo">Portfolio</a>
+        <button class="burger-menu" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button class="theme-toggle" aria-label="Changer le thème">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+          <li class="mobile-social-links">
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="accueil" class="hero">
+        <div class="floating-particles">
+          <div class="particle" style="left: 5%; animation-delay: 0s"></div>
+          <div class="particle" style="left: 25%; animation-delay: 3s"></div>
+          <div class="particle" style="left: 45%; animation-delay: 6s"></div>
+          <div class="particle" style="left: 65%; animation-delay: 9s"></div>
+          <div class="particle" style="left: 85%; animation-delay: 12s"></div>
+        </div>
+        <div class="hero-content">
+          <div class="hero-text" data-aos="fade-right">
+            <h1>Mehdi Vieille</h1>
+            <p>Développeur Web Créatif</p>
+            <p>
+              Passionné par la création d'expériences web uniques et innovantes
+            </p>
+            <div class="hero-social-links">
+              <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+          <div class="profile-image" data-aos="fade-left">
+            <img
+              src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&auto=format&fit=crop&q=60"
+              alt="Photo de profil"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="apropos" class="about">
+        <h2 data-aos="fade-up">À propos de moi</h2>
+        <article class="about-content" data-aos="fade-up">
+          <div class="about-header">
+            <h3>
+              Développeur Web Freelance | Créateur d'Expériences Digitales
+            </h3>
+            <p>
+              Passionné par le développement web et l'innovation technologique,
+              je transforme des concepts abstraits en solutions numériques
+              concrètes et élégantes. Mon parcours de développeur freelance est
+              guidé par la conviction que chaque projet est une opportunité
+              unique de créer quelque chose de remarquable.
+            </p>
+          </div>
+
+          <div class="about-expertise">
+            <h3>Mon Expertise</h3>
+            <p>
+              Avec plusieurs années d'expérience dans le développement web, je
+              maîtrise un écosystème technologique complet :
+            </p>
+            <ul>
+              <li>
+                <strong>Développement Frontend :</strong> HTML5, CSS3,
+                JavaScript, React, Vue.js
+              </li>
+              <li>
+                <strong>Développement Backend :</strong> Node.js, PHP, Python,
+                bases de données SQL et NoSQL
+              </li>
+              <li>
+                <strong>Outils et Méthodologies :</strong> Git, Docker,
+                methodologies Agile, responsive design
+              </li>
+            </ul>
+          </div>
+
+          <div class="about-philosophy">
+            <h3>Ma Philosophie</h3>
+            <p>
+              Je crois en des solutions sur-mesure, centrées utilisateur, qui
+              allient performance technique et expérience utilisateur intuitive.
+              Chaque ligne de code que j'écris est pensée pour être à la fois
+              efficace et élégante.
+            </p>
+          </div>
+
+          <div class="about-values">
+            <h3>Mes Valeurs</h3>
+            <ul>
+              <li>
+                <strong>Collaboration :</strong> Je considère chaque projet
+                comme un partenariat
+              </li>
+              <li>
+                <strong>Innovation :</strong> Toujours à l'affût des dernières
+                tendances technologiques
+              </li>
+              <li>
+                <strong>Qualité :</strong> Engagement total envers des livrables
+                irréprochables
+              </li>
+            </ul>
+          </div>
+
+          <div class="about-contact">
+            <h3>Contact</h3>
+            <p>
+              Vous avez un projet ? Discutons de la façon dont je peux le
+              transformer en réalité numérique.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="mailto:contact@example.com" aria-label="Email"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="projets" class="projects">
+        <h2 data-aos="fade-up">Mes Projets</h2>
+        <div class="projects-grid">
+          <article class="project-card" data-aos="fade-up">
+            <div class="project-tech">
+              <button class="tech-button" aria-label="Technologies utilisées">
+                <i class="fas fa-code"></i>
+              </button>
+              <div class="tech-dropdown">
+                <span class="tech-item"
+                  ><i class="fab fa-html5"></i> HTML5</span
+                >
+                <span class="tech-item"
+                  ><i class="fab fa-css3-alt"></i> CSS3</span
+                >
+                <span class="tech-item"
+                  ><i class="fab fa-js"></i> JavaScript</span
+                >
+                <span class="tech-item"
+                  ><i class="fab fa-react"></i> React</span
+                >
+              </div>
+            </div>
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60"
+                alt="Interface de développement web moderne"
+              />
+              <figcaption>
+                Une application web moderne avec une interface utilisateur
+                intuitive et responsive, développée avec React et JavaScript.
+              </figcaption>
+            </figure>
+            <h3>Application Web Moderne</h3>
+            <p>
+              Développement d'une interface utilisateur moderne et responsive
+            </p>
+          </article>
+
+          <article class="project-card" data-aos="fade-up">
+            <div class="project-tech">
+              <button class="tech-button" aria-label="Technologies utilisées">
+                <i class="fas fa-code"></i>
+              </button>
+              <div class="tech-dropdown">
+                <span class="tech-item"
+                  ><i class="fab fa-python"></i> Python</span
+                >
+                <span class="tech-item"
+                  ><i class="fab fa-node-js"></i> Node.js</span
+                >
+                <span class="tech-item"
+                  ><i class="fas fa-database"></i> MongoDB</span
+                >
+              </div>
+            </div>
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=60"
+                alt="Backend et base de données"
+              />
+              <figcaption>
+                Système backend robuste avec API RESTful, gestion de base de
+                données et authentification sécurisée.
+              </figcaption>
+            </figure>
+            <h3>API Backend</h3>
+            <p>
+              Développement d'une API RESTful avec gestion de base de données
+            </p>
+          </article>
+
+          <article class="project-card" data-aos="fade-up">
+            <div class="project-tech">
+              <button class="tech-button" aria-label="Technologies utilisées">
+                <i class="fas fa-code"></i>
+              </button>
+              <div class="tech-dropdown">
+                <span class="tech-item"
+                  ><i class="fab fa-html5"></i> HTML5</span
+                >
+                <span class="tech-item"><i class="fab fa-sass"></i> Sass</span>
+                <span class="tech-item"
+                  ><i class="fas fa-server"></i> Express</span
+                >
+              </div>
+            </div>
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&auto=format&fit=crop&q=60"
+                alt="Application web full-stack"
+              />
+              <figcaption>
+                Application web full-stack avec architecture moderne,
+                intégration frontend/backend et déploiement continu.
+              </figcaption>
+            </figure>
+            <h3>Application Full-Stack</h3>
+            <p>Développement d'une application web complète de bout en bout</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2 data-aos="fade-up">Contact</h2>
+        <form class="contact-form" data-aos="fade-up">
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Téléphone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[0-9]{10}"
+              placeholder="Votre numéro de téléphone"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="project-type">Type de projet</label>
+            <select id="project-type" name="project-type" required>
+              <option value="" disabled selected>
+                Sélectionnez un type de projet
+              </option>
+              <option value="website">Site web</option>
+              <option value="webapp">Application web</option>
+              <option value="mobile">Application mobile</option>
+              <option value="other">Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="project-description">Description du projet</label>
+            <textarea
+              id="project-description"
+              name="project-description"
+              rows="4"
+              placeholder="Décrivez votre projet, vos attentes et vos objectifs..."
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-social-links">
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <button id="scroll-top" class="scroll-top" aria-label="Retour en haut">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
