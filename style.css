@@ -1,19 +1,19 @@
 /* Variables et reset */
 :root {
-    /* Light mode */
-    --primary-color: #c5e3ff;
-    --secondary-color: #8cc2ff;
-    --accent-color: #339af0;
-    --text-color: #1e3a5f;
-    --bg-color: #ffffff;
-    --card-bg: #ffffff;
-    --form-bg: #ffffff;
-    --input-bg: #ffffff;
-    --input-border: #8cc2ff;
-    --shadow-color: rgba(33, 150, 243, 0.2);
+    /* Light mode - Nouvelles couleurs plus variées */
+    --primary-color: #f0fdf4;      /* Vert très clair */
+    --secondary-color: #f5f3ff;    /* Violet très clair */
+    --accent-color: #7c3aed;       /* Violet vif */
+    --text-color: #1f2937;         /* Gris foncé */
+    --bg-color: #ffffff;           /* Blanc */
+    --card-bg: #ffffff;            /* Blanc */
+    --form-bg: #ffffff;            /* Blanc */
+    --input-bg: #f8fafc;           /* Gris très clair */
+    --input-border: #e5e7eb;       /* Gris clair */
+    --shadow-color: rgba(124, 58, 237, 0.15);  /* Ombre violette */
     --transition: all 0.3s ease;
     --white: #ffffff;
-    --gray: #78909c;
+    --gray: #6b7280;               /* Gris moyen */
 }
 
 [data-theme="dark"] {
@@ -407,14 +407,23 @@ button:hover ~ .mouse-follower,
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    color: #ffffff;
+    color: var(--text-color);
     font-weight: 700;
     animation: slideInLeft 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.hero h2 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    animation: slideInLeft 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s backwards;
+    text-align: left;
+}
+
 .hero p {
     font-size: 1.4rem;
-    color: #ffffff;
+    color: var(--text-color);
     margin-bottom: 2rem;
     opacity: 0.95;
     font-weight: 400;
@@ -429,13 +438,13 @@ button:hover ~ .mouse-follower,
 }
 
 .hero-social-links a {
-    color: #ffffff;
+    color: var(--accent-color);
     font-size: 1.8rem;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-social-links a:hover {
-    color: var(--accent-color);
+    color: var(--text-color);
     transform: translateY(-5px) scale(1.1);
 }
 
