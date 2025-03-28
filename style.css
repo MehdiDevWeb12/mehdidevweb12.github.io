@@ -1,19 +1,25 @@
 /* Variables et reset */
 :root {
-    /* Light mode - Nouvelles couleurs plus variées */
-    --primary-color: #f0fdf4;      /* Vert très clair */
-    --secondary-color: #f5f3ff;    /* Violet très clair */
-    --accent-color: #7c3aed;       /* Violet vif */
-    --text-color: #1f2937;         /* Gris foncé */
-    --bg-color: #ffffff;           /* Blanc */
-    --card-bg: #ffffff;            /* Blanc */
-    --form-bg: #ffffff;            /* Blanc */
-    --input-bg: #f8fafc;           /* Gris très clair */
-    --input-border: #e5e7eb;       /* Gris clair */
-    --shadow-color: rgba(124, 58, 237, 0.15);  /* Ombre violette */
+    /* Light mode - Couleurs plus sombres et apaisantes */
+    --primary-color: #e9edf0;      /* Gris clair légèrement bleuté plus foncé */
+    --secondary-color: #dfe3e8;    /* Gris clair plus foncé */
+    --accent-color: #4b599d;       /* Bleu indigo plus profond et moins vif */
+    --text-color: #263545;         /* Bleu-gris très foncé pour meilleur contraste */
+    --bg-color: #eaeef2;           /* Blanc cassé plus foncé */
+    --card-bg: #f5f7fa;            /* Blanc moins pur */
+    --form-bg: #ebeef2;            /* Gris très clair plus foncé */
+    --input-bg: #e4e8ed;           /* Gris clair plus prononcé */
+    --input-border: #d0d6de;       /* Gris moyen plus visible */
+    --shadow-color: rgba(59, 72, 99, 0.15);  /* Ombre plus visible */
     --transition: all 0.3s ease;
     --white: #ffffff;
-    --gray: #6b7280;               /* Gris moyen */
+    --gray: #5f6b7a;               /* Gris moyen plus foncé */
+    
+    /* Variables pour le curseur personnalisé */
+    --cursor-inner-size: 8px;
+    --cursor-outer-size: 40px;
+    --cursor-border-width: 1px;
+    --cursor-trail-size: 20px;
 }
 
 [data-theme="dark"] {
@@ -160,7 +166,7 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: 110vh;
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
@@ -178,9 +184,9 @@ body {
     right: 0;
     bottom: 0;
     background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        rgba(255, 255, 255, 0.1) 0%,
-        rgba(255, 255, 255, 0.05) 25%,
-        rgba(255, 255, 255, 0.02) 50%,
+        rgba(75, 89, 157, 0.05) 0%,
+        rgba(75, 89, 157, 0.03) 25%,
+        rgba(75, 89, 157, 0.01) 50%,
         transparent 70%);
     transition: background 0.3s ease;
     mix-blend-mode: overlay;
@@ -193,7 +199,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,500 C250,450 250,550 500,500 C750,450 750,550 1000,500 M0,600 C250,550 250,650 500,600 C750,550 750,650 1000,600' fill='none' stroke='rgba(255, 255, 255, 0.08)' stroke-width='1'/%3E%3C/svg%3E");
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,500 C250,450 250,550 500,500 C750,450 750,550 1000,500 M0,600 C250,550 250,650 500,600 C750,550 750,650 1000,600' fill='none' stroke='rgba(75, 89, 157, 0.07)' stroke-width='1'/%3E%3C/svg%3E");
     background-size: 200% 200px;
     animation: waveMove 25s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
     opacity: 0.4;
@@ -345,7 +351,7 @@ button:hover ~ .mouse-follower,
     height: 300px;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgba(38, 53, 69, 0.15);
 }
 
 .profile-image img {
@@ -486,9 +492,9 @@ h2 {
 
 .project-card {
     background: var(--card-bg);
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 15px var(--shadow-color);
+    box-shadow: 0 4px 12px var(--shadow-color);
     transition: var(--transition);
     border: 1px solid var(--input-border);
     position: relative;
@@ -496,7 +502,7 @@ h2 {
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px var(--shadow-color);
+    box-shadow: 0 8px 20px var(--shadow-color);
 }
 
 .project-card figure {
@@ -565,11 +571,13 @@ h2 {
     justify-content: center;
     cursor: pointer;
     transition: var(--transition);
+    box-shadow: 0 2px 6px rgba(59, 72, 99, 0.2);
 }
 
 .tech-button:hover {
-    background: #42a5f5;
+    background: #3d4a8a; /* Version plus foncée de l'accent */
     transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(59, 72, 99, 0.25);
 }
 
 .tech-dropdown {
@@ -670,7 +678,7 @@ h2 {
 .form-group select:focus {
     outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(51, 154, 240, 0.2);
+    box-shadow: 0 0 0 3px rgba(75, 89, 157, 0.15);
     background-color: var(--white);
 }
 
@@ -720,10 +728,13 @@ button[type="submit"] {
     cursor: pointer;
     font-size: 1rem;
     transition: var(--transition);
+    box-shadow: 0 2px 6px rgba(59, 72, 99, 0.2);
 }
 
 button[type="submit"]:hover {
-    background: #42a5f5;
+    background: #3d4a8a; /* Version plus foncée de l'accent */
+    box-shadow: 0 4px 8px rgba(59, 72, 99, 0.25);
+    transform: translateY(-2px);
 }
 
 /* Footer */
@@ -793,7 +804,7 @@ button[type="submit"]:hover {
     visibility: hidden;
     transform: translateY(20px);
     transition: var(--transition);
-    box-shadow: 0 2px 10px var(--shadow-color);
+    box-shadow: 0 2px 10px rgba(59, 72, 99, 0.2);
     z-index: 999;
 }
 
@@ -804,7 +815,7 @@ button[type="submit"]:hover {
 }
 
 .scroll-top:hover {
-    background: #42a5f5;
+    background: #3d4a8a; /* Version plus foncée de l'accent */
     transform: translateY(-3px);
     box-shadow: 0 4px 15px var(--shadow-color);
 }
@@ -910,6 +921,10 @@ button[type="submit"]:hover {
     [data-theme="dark"] .mobile-social-links a:hover {
         color: var(--accent-color);
     }
+
+    .hero {
+        min-height: 100vh;
+    }
 }
 
 /* Animation du menu burger */
@@ -1011,12 +1026,16 @@ button[type="submit"]:hover {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    border: 1px solid var(--input-border);
 }
 
 .about-content > div {
     margin-bottom: 3rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--input-border);
 }
 
 .about-content > div:last-child {
@@ -1111,4 +1130,303 @@ button[type="submit"]:hover {
     background-color: var(--input-bg);
     border-color: var(--accent-color);
     box-shadow: 0 0 0 3px rgba(51, 154, 240, 0.2);
+}
+
+.particles-canvas {
+    /* Supprimer cette section */
+}
+
+[data-theme="light"] .particles-canvas {
+    /* Supprimer cette section */
+}
+
+[data-theme="dark"] .particles-canvas {
+    /* Supprimer cette section */
+}
+
+/* Curseur personnalisé - Désactivé */
+.custom-cursor {
+    display: none; /* Masquer le curseur personnalisé */
+}
+
+/* Réactiver le curseur par défaut sur tous les éléments */
+a, button, [role="button"], .clickable, 
+input, textarea, select, label {
+    cursor: auto;
+}
+
+/* Désactiver l'effet magnétique */
+.magneto-cursor {
+    transform: none !important;
+    transition: none !important;
+}
+
+/* Curseur personnalisé */
+.custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.cursor-inner {
+    position: fixed;
+    width: var(--cursor-inner-size);
+    height: var(--cursor-inner-size);
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, opacity 0.2s;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.cursor-outer {
+    position: fixed;
+    width: var(--cursor-outer-size);
+    height: var(--cursor-outer-size);
+    border: var(--cursor-border-width) solid var(--accent-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.1s, height 0.1s, transform 0.1s;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0.5;
+}
+
+/* État actif du curseur (lors du survol d'éléments cliquables) */
+.cursor-hover .cursor-inner {
+    width: 12px;
+    height: 12px;
+    opacity: 0.8;
+    background: var(--accent-color);
+}
+
+.cursor-hover .cursor-outer {
+    width: 50px;
+    height: 50px;
+    border-color: var(--accent-color);
+    opacity: 0.3;
+}
+
+/* État de clic du curseur */
+.cursor-click .cursor-inner {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.6;
+}
+
+.cursor-click .cursor-outer {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.2;
+}
+
+/* Masquer le curseur natif sur les éléments interactifs */
+a, button, [role="button"], .clickable, 
+input, textarea, select, label {
+    cursor: none;
+}
+
+/* Désactiver le curseur personnalisé sur les appareils tactiles */
+@media (hover: none) and (pointer: coarse) {
+    .custom-cursor {
+        display: none;
+    }
+    
+    a, button, [role="button"], .clickable,
+    input, textarea, select, label {
+        cursor: auto;
+    }
+}
+
+/* Animation de traînée pour le curseur externe */
+@keyframes cursorTrail {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.cursor-trail {
+    position: absolute;
+    width: var(--cursor-trail-size);
+    height: var(--cursor-trail-size);
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 9997;
+    animation: cursorTrail 0.5s forwards;
+}
+
+/* Effets spéciaux du curseur pour différents types d'éléments */
+/* Effet pour les liens et boutons */
+.cursor-link .cursor-inner {
+    width: 6px;
+    height: 6px;
+    background-color: white;
+}
+
+.cursor-link .cursor-outer {
+    width: 30px;
+    height: 30px;
+    background-color: var(--accent-color);
+    opacity: 0.3;
+    border: none;
+}
+
+/* Effet pour les images et médias */
+.cursor-media .cursor-inner {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    mix-blend-mode: difference;
+}
+
+.cursor-media .cursor-outer {
+    opacity: 0;
+}
+
+/* Effet pour les formulaires */
+.cursor-input .cursor-inner {
+    width: 4px;
+    height: 15px;
+    border-radius: 1px;
+    background-color: var(--accent-color);
+}
+
+.cursor-input .cursor-outer {
+    width: 15px;
+    height: 15px;
+    opacity: 0.1;
+}
+
+/* Effet pour les textareas */
+.cursor-text .cursor-inner {
+    width: 6px;
+    height: 6px;
+}
+
+.cursor-text .cursor-outer::before {
+    content: "Éditer";
+    position: absolute;
+    font-size: 10px;
+    color: var(--accent-color);
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0.8;
+}
+
+/* Effet magnétique pour les éléments attirés */
+.magneto-cursor {
+    position: relative;
+    overflow: visible;
+}
+
+.magneto-cursor::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    border-radius: inherit;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Bouton pour activer/désactiver le curseur personnalisé */
+.toggle-cursor-button {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    width: 40px;
+    height: 40px;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.toggle-cursor-button:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Ajuster les positions pour les appareils mobiles */
+@media (max-width: 768px) {
+    .toggle-cursor-button {
+        bottom: 1rem;
+        left: 1rem;
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Styles pour la réduction du mouvement */
+@media (prefers-reduced-motion: reduce), 
+       (prefers-reduced-motion) {
+    /* Désactiver les animations de traînée du curseur */
+    .cursor-outer {
+        transition: none;
+    }
+    
+    .cursor-inner {
+        transition: none;
+    }
+    
+    /* Simplifier les transformations et animations */
+    .cursor-trail {
+        display: none;
+    }
+    
+    .cursor-click .cursor-inner,
+    .cursor-click .cursor-outer {
+        transform: none;
+    }
+    
+    /* Réduire les effets de survol */
+    .cursor-hover .cursor-inner,
+    .cursor-hover .cursor-outer {
+        transition: none;
+    }
+    
+    /* Simplifier l'effet de déformation au mouvement rapide */
+    .magneto-cursor:hover {
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+/* Styles pour la classe reduced-motion */
+.reduced-motion .cursor-trail {
+    display: none;
+}
+
+.reduced-motion .cursor-outer,
+.reduced-motion .cursor-inner {
+    transition-duration: 0.05s;
+}
+
+.reduced-motion .magneto-cursor {
+    transition: none !important;
+}
+
+.reduced-motion .magneto-cursor:hover {
+    transform: none !important;
 } 

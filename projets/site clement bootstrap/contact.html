@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact - Galerie de Clément Nezzar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header repris de la page "À propos" -->
+    <header class="bg-black text-light py-2">
+      <div class="container d-flex justify-content-between align-items-center">
+        <h1 class="fs-6 text-uppercase pt-2 mb-0">
+          <a href="index.html" class="text-light text-decoration-none"
+            >galerie de clement nezzar</a
+          >
+        </h1>
+
+        <!-- Navigation desktop -->
+        <!-- Navigation desktop -->
+        <!-- Navigation desktop - Modifiez cette partie -->
+        <nav class="d-none d-lg-block">
+          <ul class="list-unstyled d-flex mb-0 align-items-center">
+            <li class="mx-3">
+              <a href="index.html" class="text-light text-decoration-none"
+                >Accueil</a
+              >
+            </li>
+            <li class="mx-3">
+              <a href="apropos.html" class="text-light text-decoration-none"
+                >A propos</a
+              >
+            </li>
+            <li class="mx-3">
+              <a href="galerie.html" class="text-light text-decoration-none"
+                >Galerie</a
+              >
+            </li>
+            <li class="mx-3">
+              <a href="contact.html" class="text-light text-decoration-none"
+                >Contact</a
+              >
+            </li>
+            <li class="ms-3">
+              <button
+                id="themeToggle"
+                class="btn btn-sm btn-outline-light rounded-circle"
+              >
+                <i class="fas fa-moon"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Menu burger pour tablette et mobile -->
+        <nav role="navigation" class="d-lg-none">
+          <div id="menuToggle">
+            <input type="checkbox" id="menuCheckbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <!-- Menu burger pour tablette et mobile - Modifiez cette partie -->
+            <ul id="menu">
+              <li>
+                <a href="index.html">Accueil</a>
+              </li>
+              <li>
+                <a href="apropos.html">A propos</a>
+              </li>
+              <li>
+                <a href="galerie.html">Galerie</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+              <li class="theme-toggle-mobile">
+                <a href="#" id="themeToggleMobile">
+                  <i class="fas fa-moon me-2"></i> Mode sombre
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- Ajouter ce code dans le header, juste après votre liste de navigation -->
+    </header>
+
+    <main>
+      <!-- Bannière de la page contact -->
+      <section class="bg-dark text-light py-4">
+        <div class="container text-center">
+          <h2 class="text-uppercase mb-2">Contactez-nous</h2>
+          <p class="text-warning">
+            Une question, une demande ou un projet ? N'hésitez pas à nous
+            contacter
+          </p>
+        </div>
+      </section>
+
+      <!-- Informations de contact et formulaire -->
+      <section class="py-5">
+        <div class="container">
+          <div class="row">
+            <!-- Informations de contact -->
+            <div class="col-12 col-md-5 mb-4 mb-md-0" data-aos="fade-right">
+              <h3 class="mb-4">Coordonnées</h3>
+              <div class="mb-4">
+                <h5>
+                  <i class="fas fa-map-marker-alt me-2 text-warning"></i>
+                  Adresse
+                </h5>
+                <p>
+                  Galerie 18bis<br />18 Rue de la Liberté<br />25000 Besançon,
+                  France
+                </p>
+              </div>
+              <div class="mb-4">
+                <h5>
+                  <i class="fas fa-phone me-2 text-warning"></i> Téléphone
+                </h5>
+                <p>+33 (0)3 81 XX XX XX</p>
+              </div>
+              <div class="mb-4">
+                <h5><i class="fas fa-envelope me-2 text-warning"></i> Email</h5>
+                <p>contact@galerie-clement-nezzar.fr</p>
+              </div>
+              <div class="mb-4">
+                <h5>
+                  <i class="fas fa-clock me-2 text-warning"></i> Horaires
+                  d'ouverture
+                </h5>
+                <p>
+                  Du mardi au samedi : 10h - 19h<br />Dimanche : 14h - 18h<br />Fermé
+                  le lundi
+                </p>
+              </div>
+              <div class="mb-4">
+                <h5>
+                  <i class="fas fa-share-alt me-2 text-warning"></i> Médias
+                  sociaux
+                </h5>
+                <div class="fs-3">
+                  <a href="#" class="text-dark me-3"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a href="#" class="text-dark me-3"
+                    ><i class="fab fa-facebook"></i
+                  ></a>
+                  <a href="#" class="text-dark me-3"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a href="#" class="text-dark"
+                    ><i class="fab fa-pinterest"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Formulaire de contact -->
+            <div class="col-12 col-md-7" data-aos="fade-left">
+              <div class="card shadow-sm">
+                <div class="card-body p-4">
+                  <h3 class="mb-4">Formulaire de contact</h3>
+                  <form id="contactForm">
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Nom complet *</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email *</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="phone" class="form-label">Téléphone</label>
+                      <input type="tel" class="form-control" id="phone" />
+                    </div>
+                    <div class="mb-3">
+                      <label for="subject" class="form-label">Sujet *</label>
+                      <select class="form-select" id="subject" required>
+                        <option value="" selected disabled>
+                          Choisissez un sujet
+                        </option>
+                        <option value="information">
+                          Demande d'information
+                        </option>
+                        <option value="achat">Achat d'une œuvre</option>
+                        <option value="visite">Visite de la galerie</option>
+                        <option value="collaboration">
+                          Projet de collaboration
+                        </option>
+                        <option value="commande">Commande d'œuvre</option>
+                        <option value="autre">Autre</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="message" class="form-label">Message *</label>
+                      <textarea
+                        class="form-control"
+                        id="message"
+                        rows="5"
+                        required
+                      ></textarea>
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="privacy"
+                        required
+                      />
+                      <label class="form-check-label" for="privacy"
+                        >J'accepte que mes données soient utilisées pour traiter
+                        ma demande *</label
+                      >
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="newsletter"
+                      />
+                      <label class="form-check-label" for="newsletter"
+                        >Je souhaite m'abonner à la newsletter</label
+                      >
+                    </div>
+                    <button
+                      type="submit"
+                      class="btn btn-warning text-uppercase"
+                    >
+                      Envoyer
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section pour demandes spécifiques -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <h3 class="text-center mb-5">Demandes spécifiques</h3>
+          <div class="row">
+            <!-- Commande d'œuvre -->
+            <div class="col-md-6 mb-4" data-aos="fade-up">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                  <div class="text-center mb-3">
+                    <i class="fas fa-paint-brush fa-3x text-warning"></i>
+                  </div>
+                  <h4 class="card-title text-center mb-3">
+                    Commande d'œuvre sur mesure
+                  </h4>
+                  <p class="card-text">
+                    Vous souhaitez une œuvre personnalisée ? Clément Nezzar
+                    réalise des commandes sur mesure selon vos besoins et vos
+                    envies. Que ce soit une peinture, un dessin, une
+                    photographie ou une sculpture, décrivez votre projet dans le
+                    formulaire de contact en sélectionnant "Commande d'œuvre"
+                    comme sujet.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Collaboration -->
+            <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                  <div class="text-center mb-3">
+                    <i class="fas fa-handshake fa-3x text-warning"></i>
+                  </div>
+                  <h4 class="card-title text-center mb-3">
+                    Projets de collaboration
+                  </h4>
+                  <p class="card-text">
+                    Vous êtes une galerie, une entreprise ou un créateur et vous
+                    souhaitez collaborer avec Clément Nezzar ? Nous sommes
+                    ouverts à différentes formes de partenariats : expositions,
+                    projets artistiques communs, interventions dans des
+                    événements, etc. Partagez-nous votre idée via le formulaire
+                    de contact en sélectionnant "Projet de collaboration" comme
+                    sujet.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer repris de la page "À propos" -->
+    <footer class="bg-black text-light py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 mb-3">
+            <h5 class="text-uppercase">Galerie Clément Nezzar</h5>
+            <p>
+              Artiste expressionniste contemporain<br />
+              Institut Supérieur des Beaux Arts de Besançon
+            </p>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <h5 class="text-uppercase">Liens</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-light">Accueil</a></li>
+              <li><a href="galerie.html" class="text-light">Galerie</a></li>
+              <li><a href="apropos.html" class="text-light">À propos</a></li>
+              <li><a href="contact.html" class="text-light">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <h5 class="text-uppercase">Suivez-nous</h5>
+            <div class="fs-3">
+              <a
+                href="https://www.instagram.com/clement_nezzark/"
+                class="text-light me-2"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-light me-2"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="text-light me-2"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-light"
+                ><i class="fab fa-pinterest"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12 text-center">
+            <p class="small">
+              &copy; 2025 Galerie Clément Nezzar. Tous droits réservés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

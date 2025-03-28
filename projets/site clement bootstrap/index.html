@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Galerie de Clément Nezzar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="bg-black text-light py-2">
+      <div class="container d-flex justify-content-between align-items-center">
+        <h1 class="fs-6 text-uppercase pt-2 mb-0">
+          <a href="index.html" class="text-light text-decoration-none"
+            >galerie de clement nezzar</a
+          >
+        </h1>
+
+        <!-- Navigation desktop -->
+        <!-- Navigation desktop -->
+        <!-- Navigation desktop - Modifiez cette partie -->
+        <nav class="d-none d-lg-block">
+          <ul class="list-unstyled d-flex mb-0 align-items-center">
+            <li class="mx-3">
+              <a href="index.html" class="text-light text-decoration-none"
+                >Accueil</a
+              >
+            </li>
+            <li class="mx-3">
+              <a href="apropos.html" class="text-light text-decoration-none"
+                >A propos</a
+              >
+            </li>
+            <li class="mx-3">
+              <a href="galerie.html" class="text-light text-decoration-none"
+                >Galerie</a
+              >
+            </li>
+            <li class="mx-3">
+              <a href="contact.html" class="text-light text-decoration-none"
+                >Contact</a
+              >
+            </li>
+            <li class="ms-3">
+              <button
+                id="themeToggle"
+                class="btn btn-sm btn-outline-light rounded-circle"
+              >
+                <i class="fas fa-moon"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Menu burger pour tablette et mobile -->
+        <nav role="navigation" class="d-lg-none">
+          <div id="menuToggle">
+            <input type="checkbox" id="menuCheckbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <!-- Menu burger pour tablette et mobile - Modifiez cette partie -->
+            <ul id="menu">
+              <li>
+                <a href="index.html">Accueil</a>
+              </li>
+              <li>
+                <a href="apropos.html">A propos</a>
+              </li>
+              <li>
+                <a href="galerie.html">Galerie</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+              <li class="theme-toggle-mobile">
+                <a href="#" id="themeToggleMobile">
+                  <i class="fas fa-moon me-2"></i> Mode sombre
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- Ajouter ce code dans le header, juste après votre liste de navigation -->
+    </header>
+    <main>
+      <section class="hero-banner position-relative overflow-hidden">
+        <!-- Bannière avec overlay -->
+        <div
+          class="banner-image position-relative img-fluid theme-bg"
+          style="height: 80vh; min-height: 500px"
+        >
+          <!-- Overlay avec dégradé -->
+          <div
+            class="position-absolute w-100 h-100"
+            style="
+              background: linear-gradient(
+                45deg,
+                rgba(0, 0, 0, 0.7) 0%,
+                rgba(0, 0, 0, 0.3) 100%
+              );
+            "
+          ></div>
+
+          <!-- Éléments décoratifs -->
+          <div class="position-absolute top-0 start-0 w-100 h-100">
+            <div
+              class="position-absolute top-0 start-0"
+              style="
+                width: 200px;
+                height: 200px;
+                background: rgba(255, 193, 7, 0.1);
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+              "
+            ></div>
+            <div
+              class="position-absolute bottom-0 end-0"
+              style="
+                width: 300px;
+                height: 300px;
+                background: rgba(255, 193, 7, 0.1);
+                border-radius: 50%;
+                transform: translate(50%, 50%);
+              "
+            ></div>
+          </div>
+
+          <div
+            class="container h-100 d-flex flex-column justify-content-center position-relative"
+          >
+            <div
+              class="text-start"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <span
+                class="text-warning text-uppercase fw-light letter-spacing-2 mb-3 d-block"
+                >Bienvenue dans la</span
+              >
+              <h1 class="text-warning fw-bold display-4 mb-4">
+                Galerie de Clément Nezzar
+              </h1>
+              <p class="theme-text fs-5 mb-4" style="max-width: 600px">
+                Découvrez l'art qui parle à votre âme, où chaque œuvre raconte
+                une histoire unique et captivante.
+              </p>
+              <div class="d-flex gap-3">
+                <a
+                  href="galerie.html"
+                  class="btn btn-warning px-4 py-3 text-uppercase fw-bold"
+                  >Découvrir</a
+                >
+                <a
+                  href="apropos.html"
+                  class="btn btn-outline-warning px-4 py-3 text-uppercase fw-bold"
+                  >À propos</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Éléments décoratifs -->
+      </section>
+      <hr />
+      <section class="container my-5">
+        <div class="row align-items-center">
+          <!-- Colonne pour l'image (sur les écrans moyens et plus grands, l'image est à gauche) -->
+          <div class="col-12 col-md-6 mb-4 mb-md-0">
+            <img
+              class="img-fluid p-2"
+              src="img/oeuvre projo.jpg"
+              alt="Image de l'artiste"
+            />
+          </div>
+
+          <!-- Colonne pour le texte (sur les écrans moyens et plus grands, le texte est à droite) -->
+          <div class="col-12 col-md-6">
+            <h3 class="text-center text-md-left">
+              Notre voyage : l'art qui relie et inspire
+            </h3>
+
+            <div data-aos="fade-right">
+              <p class="text-center text-md-left fs-6">
+                À seulement 23 ans, notre artiste allie passion et créativité
+                dans chacune de ses œuvres. Des peintures vibrantes aux
+                sculptures captivantes, chaque œuvre raconte une histoire et
+                vous invite à ressentir. Ce voyage a commencé avec un amour pour
+                les couleurs et les formes, s'épanouissant dans un style unique
+                qui reflète le monde qui nous entoure. Notre objectif est de
+                vous connecter à travers l'art, de susciter des émotions et des
+                conversations. Nous pensons que l'art doit être accessible et
+                pertinent, invitant chacun à découvrir la beauté de
+                l'expression. Rejoignez nous dans cette aventure artistique !
+              </p>
+            </div>
+            <a
+              href="apropos.html"
+              class="btn btn-warning mx-auto d-block text-uppercase"
+            >
+              A Propos
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="row m-auto bg-black">
+        <article class="col-sm-6 col-md-6 col-lg-3">
+          <h3 class="text-center text-uppercase text-light mt-3">peinture</h3>
+          <div
+            id="carouselExample1"
+            class="carousel slide mt-4"
+            data-bs-ride="carousel"
+            data-bs-interval="4000"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  id="image"
+                  src="img/nouvel oeuvre.jpg"
+                  class="d-block w-100 lalala img-fluid"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  id="image"
+                  src="img/nouvelle image1 (1).jpg"
+                  class="d-block w-100 lalala img-fluid"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  id="image"
+                  src="img/expo1 (1).jpg"
+                  class="d-block w-100 lalala img-fluid"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  id="image"
+                  src="img/expo2 (1).jpg"
+                  class="d-block w-100 lalala img-fluid"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample1"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample1"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </article>
+
+        <article class="col-sm-6 col-md-6 col-lg-3">
+          <h3 class="text-center mt-3 text-uppercase text-light">dessin</h3>
+          <div
+            id="carouselExample"
+            class="carousel slide mt-4"
+            data-bs-ride="carousel"
+            data-bs-interval="4000"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="img/dessin1.webp"
+                  class="d-block w-100 lalala img-fluid"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="img/dessin2 (1).jpg"
+                  class="d-block w-100 lalala img-fluid"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="img/dessin3 (1).jpg"
+                  class="d-block w-100 lalala img-fluid"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="img/dessin4 (1).jpg"
+                  class="d-block w-100 lalala img-fluid"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </article>
+        <article class="col-sm-6 col-md-6 col-lg-3">
+          <h3 class="text-center mt-3 text-uppercase text-light">photo</h3>
+          <div
+            id="carouselExample2"
+            class="carousel slide mt-4"
+            data-bs-ride="carousel"
+            data-bs-interval="4000"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="img/photo clem.jpg"
+                  class="d-block w-100 img-fluid"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="img/photoclem2.jpg"
+                  class="d-block w-100 img-fluid"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="img/photoclem3.jpg"
+                  class="d-block w-100 img-fluid"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample2"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample2"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </article>
+        <article class="col-sm-6 col-md-6 col-lg-3">
+          <h3 class="text-center mt-3 text-uppercase text-light">sculpture</h3>
+          <div
+            id="carouselExample3"
+            class="carousel slide mt-4"
+            data-bs-ride="carousel"
+            data-bs-interval="4000"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="img/sculpture clem.jpg"
+                  class="d-block w-100 img-fluid"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="img/sculpture2.jpg"
+                  class="d-block w-100 img-fluid"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample3"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample3"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </article>
+        <div class="text-center my-4">
+          <a href="galerie.html" class="btn btn-danger px-4 text-uppercase">
+            Galerie
+          </a>
+        </div>
+        <!-- Fond flou derrière l'image zoomée -->
+        <div class="zoomed-background"></div>
+
+        <!-- Image zoomée -->
+        <img class="zoomed-image" id="zoomedImage" src="" alt="Image zoomée" />
+      </section>
+      <!-- Section Témoignages -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center text-uppercase fs-5 mb-4">Témoignages</h2>
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <div class="card-body text-center">
+                  <i class="fas fa-quote-left fa-2x text-warning mb-3"></i>
+                  <p class="card-text">
+                    "Les œuvres de Clément Nezzar m'ont profondément émue. Son
+                    travail sur la lumière et l'émotion est remarquable."
+                  </p>
+                  <div class="d-flex justify-content-center mt-3">
+                    <div>
+                      <h5 class="mb-0">Marie Dupont</h5>
+                      <p class="text-muted small">Collectionneuse d'art</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <div class="card-body text-center">
+                  <i class="fas fa-quote-left fa-2x text-warning mb-3"></i>
+                  <p class="card-text">
+                    "Un talent brut qui s'exprime à travers des médiums divers.
+                    Sa série de sculptures est particulièrement audacieuse et
+                    innovante."
+                  </p>
+                  <div class="d-flex justify-content-center mt-3">
+                    <div>
+                      <h5 class="mb-0">Jean Martin</h5>
+                      <p class="text-muted small">Critique d'art</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <div class="card-body text-center">
+                  <i class="fas fa-quote-left fa-2x text-warning mb-3"></i>
+                  <p class="card-text">
+                    "J'ai eu le privilège d'assister à son exposition 'Regards
+                    croisés'. Une expérience immersive qui redéfinit l'art
+                    contemporain."
+                  </p>
+                  <div class="d-flex justify-content-center mt-3">
+                    <div>
+                      <h5 class="mb-0">Sophie Lefèvre</h5>
+                      <p class="text-muted small">Galeriste</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Événements à venir -->
+      <section class="py-5 bg-white">
+        <div class="container">
+          <h2 class="text-center text-uppercase fs-5 mb-4">
+            Prochains événements
+          </h2>
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="card border-0 shadow-sm">
+                <div class="row g-0">
+                  <div
+                    class="col-md-4 bg-dark text-white d-flex flex-column justify-content-center align-items-center py-3"
+                  >
+                    <h3 class="fs-1 mb-0">15</h3>
+                    <p class="text-uppercase mb-0">Avril</p>
+                    <p class="mb-0">2025</p>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Vernissage "Fragments de Lumière"
+                      </h5>
+                      <p class="card-text">
+                        Découvrez les nouvelles œuvres de Clément Nezzar
+                        explorant la relation entre lumière et matière.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-muted"
+                          ><i class="fas fa-map-marker-alt me-2"></i>Galerie
+                          Principale, Paris</small
+                        >
+                      </p>
+                      <a href="#" class="btn btn-sm btn-outline-dark"
+                        >En savoir plus</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="card border-0 shadow-sm">
+                <div class="row g-0">
+                  <div
+                    class="col-md-4 bg-warning text-dark d-flex flex-column justify-content-center align-items-center py-3"
+                  >
+                    <h3 class="fs-1 mb-0">28</h3>
+                    <p class="text-uppercase mb-0">Mai</p>
+                    <p class="mb-0">2025</p>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Atelier avec l'artiste</h5>
+                      <p class="card-text">
+                        Rejoignez Clément Nezzar pour une session interactive où
+                        il partagera ses techniques de création.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-muted"
+                          ><i class="fas fa-map-marker-alt me-2"></i>Institut
+                          d'Art Contemporain</small
+                        >
+                      </p>
+                      <a href="#" class="btn btn-sm btn-outline-dark"
+                        >Réserver</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-3">
+            <a href="#" class="btn btn-warning text-uppercase"
+              >Voir tous les événements</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Newsletter -->
+      <section class="py-4 bg-dark text-white">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <h3 class="fs-5 mb-1">Restez informé</h3>
+              <p class="mb-0">
+                Abonnez-vous à notre newsletter pour recevoir les dernières
+                nouvelles, invitations aux vernissages et événements exclusifs.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <form class="row g-2">
+                <div class="col-sm-8">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Votre adresse email"
+                    required
+                  />
+                </div>
+                <div class="col-sm-4">
+                  <button type="submit" class="btn btn-warning w-100">
+                    S'abonner
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer repris de la page "À propos" -->
+    <footer class="bg-black text-light py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 mb-3">
+            <h5 class="text-uppercase">Galerie Clément Nezzar</h5>
+            <p>
+              Artiste expressionniste contemporain<br />
+              Institut Supérieur des Beaux Arts de Besançon
+            </p>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <h5 class="text-uppercase">Liens</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-light">Accueil</a></li>
+              <li><a href="galerie.html" class="text-light">Galerie</a></li>
+              <li><a href="apropos.html" class="text-light">À propos</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <h5 class="text-uppercase">Suivez-nous</h5>
+            <div class="fs-3">
+              <a
+                href="https://www.instagram.com/clement_nezzark/"
+                class="text-light me-2"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="#"
+                class="text-light me-2"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="#"
+                class="text-light me-2"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="#"
+                class="text-light"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-pinterest"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12 text-center">
+            <p class="small">
+              &copy; 2025 Galerie Clément Nezzar. Tous droits réservés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

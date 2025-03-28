@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>À propos - Galerie de Clément Nezzar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="bg-black text-light py-2">
+      <div class="container d-flex justify-content-between align-items-center">
+        <h1 class="fs-6 text-uppercase pt-2 mb-0">
+          <a href="index.html" class="text-light text-decoration-none"
+            >galerie de clement nezzar</a
+          >
+        </h1>
+
+        <!-- Navigation desktop -->
+        <!-- Navigation desktop -->
+        <!-- Navigation desktop - Modifiez cette partie -->
+        <nav class="d-none d-lg-block">
+          <ul class="list-unstyled d-flex mb-0 align-items-center">
+            <li class="mx-3">
+              <a href="index.html" class="text-light text-decoration-none"
+                >Accueil</a
+              >
+            </li>
+            <li class="mx-3">
+              <a href="apropos.html" class="text-light text-decoration-none"
+                >A propos</a
+              >
+            </li>
+            <li class="mx-3">
+              <a href="galerie.html" class="text-light text-decoration-none"
+                >Galerie</a
+              >
+            </li>
+            <li class="mx-3">
+              <a href="contact.html" class="text-light text-decoration-none"
+                >Contact</a
+              >
+            </li>
+            <li class="ms-3">
+              <button
+                id="themeToggle"
+                class="btn btn-sm btn-outline-light rounded-circle"
+              >
+                <i class="fas fa-moon"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Menu burger pour tablette et mobile -->
+        <nav role="navigation" class="d-lg-none">
+          <div id="menuToggle">
+            <input type="checkbox" id="menuCheckbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <!-- Menu burger pour tablette et mobile - Modifiez cette partie -->
+            <ul id="menu">
+              <li>
+                <a href="index.html">Accueil</a>
+              </li>
+              <li>
+                <a href="apropos.html">A propos</a>
+              </li>
+              <li>
+                <a href="galerie.html">Galerie</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+              <li class="theme-toggle-mobile">
+                <a href="#" id="themeToggleMobile">
+                  <i class="fas fa-moon me-2"></i> Mode sombre
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- Ajouter ce code dans le header, juste après votre liste de navigation -->
+    </header>
+    <main>
+      <section class="clem">
+        <div class="row align-items-center">
+          <!-- Colonne pour l'image (sur les écrans moyens et plus grands, l'image est à gauche) -->
+          <div class="col-12 col-md-6 mb-4 mb-md-0">
+            <img
+              class="img-fluid p-2"
+              src="img/Messenger_creation_7011726011780176755 (1).jpeg"
+              alt="Image de l'artiste"
+            />
+          </div>
+
+          <!-- Colonne pour le texte (sur les écrans moyens et plus grands, le texte est à droite) -->
+          <div class="col-12 col-md-6">
+            <h3 class="text-center text-md-left text-dark fw-bold">
+              A propos de moi:
+            </h3>
+            <p class="text-center text-md-left fs-6 text-dark-emphasis">
+              Clément Nezzar, est actuellement élève à l'institut supérieur des
+              beaux arts de Besançon. Ses productions racontent des histoires,
+              capturent des moments suspendus dans le temps, souvent liés à la
+              condition humaine ou aux émotions brutes. Il explore au travers de
+              ses œuvres l'existence et les conflits de l'individu, ses luttes
+              intérieures. Cherchant à figer des sentiments qui nous bousculent,
+              nous inondent, il donne à ses figures une dimension à la fois
+              corporelle et psychologique au travers de médiums tels que la
+              peinture, la photographie, la sculpture et le dessin.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="bg-black pb-2">
+          <h2 class="text-uppercase text-center text-light pt-2">exposition</h2>
+          <div class="" data-aos="fade-up-right">
+            <h3 class="text-center text-light">
+              Venez découvrir l'exposition a la galerie 18bis
+            </h3>
+          </div>
+        </div>
+        <section class="row">
+          <div class="col-12 col-md-6" data-aos="fade-right">
+            <img class="img-fluid" src="img/pres galerie.jpg" alt="" />
+          </div>
+          <div class="col-12 col-md-6" data-aos="fade-left">
+            <img
+              class="img-fluid"
+              src="img/presentation artiste expo.jpg"
+              alt=""
+            />
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <div class="bg-black">
+          <h3 class="text-uppercase text-light text-center pt-3 pb-3">
+            notre courant artistique
+          </h3>
+        </div>
+
+        <div class="container">
+          <h4 class="text-center">Nouvelle expression libre</h4>
+          <p data-aos="fade-left" class="text-center">
+            Apparu dans le nord de l'Europe au début du XXe siecle,
+            <strong>l'expressionnisme</strong> est un courant d'avant garde
+            s'interesse aux travers de la société moderne, marquant une rupture
+            vis-a-vis des conventions artistique de l'époque.
+          </p>
+
+          <p data-aos="fade-right" class="text-center">
+            En s'eloignant du réalisme académique, les artistes expressionnistes
+            se sont mis a représenter l'intensité des émotions, au travers d'une
+            palette de couleurs intense et de figures déformées et stylisées. En
+            explorant des thématiques comme la solitude, l'angoisse ou le
+            rapport à la nature, ils ont développé un repertoire de formes
+            expressives, parfoois dramatiques, pour
+            <strong>dépasser la réalité visuelle</strong> et
+            <strong>toucher l'âme</strong> du spectateur.
+          </p>
+
+          <p data-aos="fade-left" class="text-center">
+            Héritiés de l'école expressionnistes, notamment d'Oscar Kokoschka et
+            de Chaim Soutine, les trois artistes présentés pas la Galerie 18bis
+            témoignent d'un interêt pour des sujets de vie quotidienne et d'une
+            utilisation audacieuse de la couleur. Dans les genres de la
+            <strong>nature morte</strong> et du <strong>portrait</strong>, ils
+            s'illustrent par des compositions innovantes et s'intéressent a
+            l'intensité de la vie moderne et à l'isolement qui l'accompagne.
+          </p>
+
+          <p data-aos="fade-right" class="text-center">
+            De leur regard naît une experience à la fois subjective et commune,
+            celle de l'émotions individuelle et universelle, elle constitue la
+            base d'un travail plastique qui vise à susciter une réaction face à
+            la contemplation de leurs oeuvres.
+          </p>
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="row">
+        <div class="col-12 col-md-6" data-aos="fade-right">
+          <img class="img-fluid" src="img/oeuvre clem 18bis.jpg" alt="" />
+        </div>
+        <div class="col-12 col-md-6" data-aos="fade-left">
+          <img class="img-fluid" src="img/pres kim 18bis.jpg" alt="" />
+        </div>
+      </section>
+
+      <section class="container my-5">
+        <div class="bg-black">
+          <h3 class="text-uppercase text-light text-center pt-3 pb-3">
+            Les artistes de l'exposition
+          </h3>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+            <img
+              class="img-fluid p-2"
+              src="img/clem et kim.jpg"
+              alt="Kim Nezzar et Clément Nezzar devant une œuvre"
+            />
+          </div>
+
+          <div class="col-12 col-md-6" data-aos="fade-left">
+            <h4 class="text-center text-md-left">Kim et Clément Nezzar</h4>
+            <p class="text-center text-md-left fs-6">
+              Kim Nezzar et Clément Nezzar, deux figures emblématiques de la
+              "Nouvelle expression libre", ont exposé ensemble à la Galerie
+              18bis. Leur collaboration artistique s'inscrit dans une démarche
+              expressionniste contemporaine, où les émotions brutes et la
+              profondeur psychologique sont au cœur de leurs œuvres.
+            </p>
+            <p class="text-center text-md-left fs-6">
+              Kim Nezzar, avec son style caractéristique mélangeant couleurs
+              vives et compositions audacieuses, explore les thèmes de
+              l'identité et de la mémoire collective. Clément, élève à
+              l'Institut Supérieur des Beaux Arts de Besançon, apporte quant à
+              lui une vision plus introspective, centrée sur les conflits
+              intérieurs et la condition humaine.
+            </p>
+            <p class="text-center text-md-left fs-6">
+              Leur exposition commune témoigne d'un dialogue artistique fertile
+              entre deux générations d'artistes, unis par leur vision
+              expressionniste et leur volonté de dépasser la simple
+              représentation pour atteindre une vérité émotionnelle plus
+              profonde.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container my-5">
+        <h4 class="text-center text-uppercase mb-4">Parcours artistique</h4>
+        <div class="row">
+          <div class="col-12 col-md-6 mb-4" data-aos="fade-up">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Formation</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    Institut Supérieur des Beaux Arts de Besançon - En cours
+                  </li>
+                  <li class="list-group-item">
+                    Diplôme National d'Art - Option Art
+                  </li>
+                  <li class="list-group-item">
+                    Cours préparatoires aux écoles d'art
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 mb-4" data-aos="fade-up">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Expositions</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    Galerie 18bis - Exposition collective "Nouvelle expression
+                    libre"
+                  </li>
+                  <li class="list-group-item">
+                    Centre d'art contemporain - "Jeunes talents"
+                  </li>
+                  <li class="list-group-item">
+                    Festival des arts émergents - Besançon
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-dark text-light py-5">
+        <div class="container">
+          <h4 class="text-center text-uppercase mb-4">Démarche artistique</h4>
+          <div class="row">
+            <div class="col-12 col-md-8 mx-auto">
+              <p data-aos="fade-up" class="text-center">
+                Ma démarche artistique s'articule autour de l'exploration des
+                émotions humaines et de leur traduction visuelle. Je m'efforce
+                de capturer l'essence des sentiments complexes qui nous habitent
+                et de les matérialiser à travers différents médiums.
+              </p>
+              <p data-aos="fade-up" class="text-center">
+                Chaque œuvre est un fragment de mon univers intérieur, une
+                tentative de donner forme à l'invisible. Je m'inspire des
+                tensions quotidiennes, des non-dits et des silences qui peuplent
+                nos vies.
+              </p>
+              <p data-aos="fade-up" class="text-center">
+                L'expressionnisme me permet de dépasser la simple représentation
+                pour atteindre une vérité émotionnelle plus profonde. À travers
+                la déformation, la saturation des couleurs et le geste spontané,
+                je cherche à provoquer une résonance avec le spectateur, un
+                dialogue intime au-delà des mots.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black text-light py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 mb-3">
+            <h5 class="text-uppercase">Galerie Clément Nezzar</h5>
+            <p>
+              Artiste expressionniste contemporain<br />
+              Institut Supérieur des Beaux Arts de Besançon
+            </p>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <h5 class="text-uppercase">Liens</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-light">Galerie</a></li>
+              <li><a href="apropos.html" class="text-light">À propos</a></li>
+
+              <li><a href="#" class="text-light">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <h5 class="text-uppercase">Suivez-nous</h5>
+            <div class="fs-3">
+              <a
+                href="https://www.instagram.com/clement_nezzark/"
+                class="text-light me-2"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-light me-2"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="text-light me-2"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-light"
+                ><i class="fab fa-pinterest"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12 text-center">
+            <p class="small">
+              &copy; 2025 Galerie Clément Nezzar. Tous droits réservés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

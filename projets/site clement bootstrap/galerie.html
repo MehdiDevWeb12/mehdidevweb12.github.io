@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Galerie - Galerie de Clément Nezzar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header repris de la page "À propos" -->
+    <header class="bg-black text-light py-2">
+      <div class="container d-flex justify-content-between align-items-center">
+        <h1 class="fs-6 text-uppercase pt-2 mb-0">
+          <a href="index.html" class="text-light text-decoration-none"
+            >galerie de clement nezzar</a
+          >
+        </h1>
+
+        <!-- Navigation desktop -->
+        <!-- Navigation desktop -->
+        <!-- Navigation desktop - Modifiez cette partie -->
+        <nav class="d-none d-lg-block">
+          <ul class="list-unstyled d-flex mb-0 align-items-center">
+            <li class="mx-3">
+              <a href="index.html" class="text-light text-decoration-none"
+                >Accueil</a
+              >
+            </li>
+            <li class="mx-3">
+              <a href="apropos.html" class="text-light text-decoration-none"
+                >A propos</a
+              >
+            </li>
+            <li class="mx-3">
+              <a href="galerie.html" class="text-light text-decoration-none"
+                >Galerie</a
+              >
+            </li>
+            <li class="mx-3">
+              <a href="contact.html" class="text-light text-decoration-none"
+                >Contact</a
+              >
+            </li>
+            <li class="ms-3">
+              <button
+                id="themeToggle"
+                class="btn btn-sm btn-outline-light rounded-circle"
+              >
+                <i class="fas fa-moon"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Menu burger pour tablette et mobile -->
+        <nav role="navigation" class="d-lg-none">
+          <div id="menuToggle">
+            <input type="checkbox" id="menuCheckbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <!-- Menu burger pour tablette et mobile - Modifiez cette partie -->
+            <ul id="menu">
+              <li>
+                <a href="index.html">Accueil</a>
+              </li>
+              <li>
+                <a href="apropos.html">A propos</a>
+              </li>
+              <li>
+                <a href="galerie.html">Galerie</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+              <li class="theme-toggle-mobile">
+                <a href="#" id="themeToggleMobile">
+                  <i class="fas fa-moon me-2"></i> Mode sombre
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- Ajouter ce code dans le header, juste après votre liste de navigation -->
+    </header>
+
+    <main>
+      <!-- Bannière avec titre de la galerie -->
+      <section class="bg-dark text-light py-4">
+        <div class="container text-center">
+          <h2 class="text-uppercase mb-2">Galerie d'Oeuvres</h2>
+          <p class="text-warning">
+            Découvrez l'univers artistique de Clément Nezzar
+          </p>
+        </div>
+      </section>
+
+      <!-- Filtres de navigation -->
+      <section class="py-4 bg-light">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+              <div
+                class="d-flex justify-content-center flex-wrap gap-2"
+                id="gallery-filters"
+              >
+                <button class="btn btn-outline-dark active" data-filter="all">
+                  Tout
+                </button>
+                <button class="btn btn-outline-dark" data-filter="peinture">
+                  Peinture
+                </button>
+                <button class="btn btn-outline-dark" data-filter="dessin">
+                  Dessin
+                </button>
+                <button class="btn btn-outline-dark" data-filter="photo">
+                  Photographie
+                </button>
+                <button class="btn btn-outline-dark" data-filter="sculpture">
+                  Sculpture
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galerie d'images -->
+      <section class="py-5">
+        <div class="container">
+          <div class="row g-4" id="gallery-container">
+            <!-- Peintures -->
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item peinture"
+              data-aos="fade-up"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/expo2 (1).jpg"
+                    class="card-img-top gallery-img"
+                    alt="Peinture 1"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="Éclats de Lumière"
+                      data-description="Acrylique sur toile, réalisé en 2024. Une exploration des reflets et de la lumière naturelle."
+                      data-materials="Acrylique sur toile"
+                      data-dimensions="80 x 100 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Éclats de Lumière</h5>
+                  <p class="card-text mb-1">Peinture, 2024</p>
+                  <p class="card-text small text-muted">
+                    Acrylique sur toile<br />80 x 100 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item peinture"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/nouvel oeuvre.jpg"
+                    class="card-img-top gallery-img"
+                    alt="Peinture 2"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="Fragments"
+                      data-description="Huile sur toile, création de 2023. Une pièce qui explore les émotions à travers des formes abstraites."
+                      data-materials="Huile sur toile"
+                      data-dimensions="60 x 80 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Fragments</h5>
+                  <p class="card-text mb-1">Peinture, 2023</p>
+                  <p class="card-text small text-muted">
+                    Huile sur toile<br />60 x 80 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item peinture"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/expo1 (1).jpg"
+                    class="card-img-top gallery-img"
+                    alt="Peinture 2"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="Fragments"
+                      data-description="Huile sur toile, création de 2023. Une pièce qui explore les émotions à travers des formes abstraites."
+                      data-materials="Huile sur toile"
+                      data-dimensions="60 x 80 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Fragments</h5>
+                  <p class="card-text mb-1">Peinture, 2023</p>
+                  <p class="card-text small text-muted">
+                    Huile sur toile<br />60 x 80 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item peinture"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/nouvelle image1 (1).jpg"
+                    class="card-img-top gallery-img"
+                    alt="Peinture 2"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="Fragments"
+                      data-description="Huile sur toile, création de 2023. Une pièce qui explore les émotions à travers des formes abstraites."
+                      data-materials="Huile sur toile"
+                      data-dimensions="60 x 80 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Fragments</h5>
+                  <p class="card-text mb-1">Peinture, 2023</p>
+                  <p class="card-text small text-muted">
+                    Huile sur toile<br />60 x 80 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item peinture"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/image 2 tete.jpg"
+                    class="card-img-top gallery-img"
+                    alt="Peinture 2"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="Fragments"
+                      data-description="Huile sur toile, création de 2023. Une pièce qui explore les émotions à travers des formes abstraites."
+                      data-materials="Huile sur toile"
+                      data-dimensions="60 x 80 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Fragments</h5>
+                  <p class="card-text mb-1">Peinture, 2023</p>
+                  <p class="card-text small text-muted">
+                    Huile sur toile<br />60 x 80 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item peinture"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/pianiste.jpg"
+                    class="card-img-top gallery-img"
+                    alt="Peinture 2"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="Fragments"
+                      data-description="Huile sur toile, création de 2023. Une pièce qui explore les émotions à travers des formes abstraites."
+                      data-materials="Huile sur toile"
+                      data-dimensions="60 x 80 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Fragments</h5>
+                  <p class="card-text mb-1">Peinture, 2023</p>
+                  <p class="card-text small text-muted">
+                    Huile sur toile<br />60 x 80 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item peinture"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/dodo.jpg"
+                    class="card-img-top gallery-img"
+                    alt="Peinture 2"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="la chaleur de l'âme"
+                      data-description="Huile sur toile, création de 2023. Une pièce qui explore les émotions à travers des formes abstraites."
+                      data-materials="Huile sur toile"
+                      data-dimensions="60 x 80 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">la chaleur de l'âme</h5>
+                  <p class="card-text mb-1">Peinture, 2023</p>
+                  <p class="card-text small text-muted">
+                    Huile sur toile<br />60 x 80 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dessins -->
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item dessin"
+              data-aos="fade-up"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/le refuge de ses bras.jpg"
+                    class="card-img-top gallery-img"
+                    alt="Dessin 1"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="Perspectives"
+                      data-description="Fusain et graphite sur papier, 2024. Une exploration des perspectives urbaines."
+                      data-materials="Fusain et graphite sur papier"
+                      data-dimensions="30 x 40 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Perspectives</h5>
+                  <p class="card-text mb-1">Dessin, 2024</p>
+                  <p class="card-text small text-muted">
+                    Fusain et graphite sur papier<br />30 x 40 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item dessin"
+              data-aos="fade-up"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/dessin1.webp"
+                    class="card-img-top gallery-img"
+                    alt="Dessin 1"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="Perspectives"
+                      data-description="Fusain et graphite sur papier, 2024. Une exploration des perspectives urbaines."
+                      data-materials="Fusain et graphite sur papier"
+                      data-dimensions="30 x 40 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Perspectives</h5>
+                  <p class="card-text mb-1">Dessin, 2024</p>
+                  <p class="card-text small text-muted">
+                    Fusain et graphite sur papier<br />30 x 40 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item dessin"
+              data-aos="fade-up"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/se retrouver.jpg"
+                    class="card-img-top gallery-img"
+                    alt="Dessin 1"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="Perspectives"
+                      data-description="Fusain et graphite sur papier, 2024. Une exploration des perspectives urbaines."
+                      data-materials="Fusain et graphite sur papier"
+                      data-dimensions="30 x 40 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Perspectives</h5>
+                  <p class="card-text mb-1">Dessin, 2024</p>
+                  <p class="card-text small text-muted">
+                    Fusain et graphite sur papier<br />30 x 40 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item dessin"
+              data-aos="fade-up"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/dessin3 (1).jpg"
+                    class="card-img-top gallery-img"
+                    alt="Dessin 1"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="Perspectives"
+                      data-description="Fusain et graphite sur papier, 2024. Une exploration des perspectives urbaines."
+                      data-materials="Fusain et graphite sur papier"
+                      data-dimensions="30 x 40 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Perspectives</h5>
+                  <p class="card-text mb-1">Dessin, 2024</p>
+                  <p class="card-text small text-muted">
+                    Fusain et graphite sur papier<br />30 x 40 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item dessin"
+              data-aos="fade-up"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/renaissance.jpg"
+                    class="card-img-top gallery-img"
+                    alt="Dessin 1"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="Perspectives"
+                      data-description="Fusain et graphite sur papier, 2024. Une exploration des perspectives urbaines."
+                      data-materials="Fusain et graphite sur papier"
+                      data-dimensions="30 x 40 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Perspectives</h5>
+                  <p class="card-text mb-1">Dessin, 2024</p>
+                  <p class="card-text small text-muted">
+                    Fusain et graphite sur papier<br />30 x 40 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item dessin"
+              data-aos="fade-up"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/le chant de la veuve .jpg"
+                    class="card-img-top gallery-img"
+                    alt="Dessin 1"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="Perspectives"
+                      data-description="Fusain et graphite sur papier, 2024. Une exploration des perspectives urbaines."
+                      data-materials="Fusain et graphite sur papier"
+                      data-dimensions="30 x 40 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Perspectives</h5>
+                  <p class="card-text mb-1">Dessin, 2024</p>
+                  <p class="card-text small text-muted">
+                    Fusain et graphite sur papier<br />30 x 40 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item dessin"
+              data-aos="fade-up"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/bos instant volé.jpg"
+                    class="card-img-top gallery-img"
+                    alt="Dessin 1"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="Perspectives"
+                      data-description="Fusain et graphite sur papier, 2024. Une exploration des perspectives urbaines."
+                      data-materials="Fusain et graphite sur papier"
+                      data-dimensions="30 x 40 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Perspectives</h5>
+                  <p class="card-text mb-1">Dessin, 2024</p>
+                  <p class="card-text small text-muted">
+                    Fusain et graphite sur papier<br />30 x 40 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item dessin"
+              data-aos="fade-up"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/dessin2 (1).jpg"
+                    class="card-img-top gallery-img"
+                    alt="Dessin 1"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="Perspectives"
+                      data-description="Fusain et graphite sur papier, 2024. Une exploration des perspectives urbaines."
+                      data-materials="Fusain et graphite sur papier"
+                      data-dimensions="30 x 40 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Perspectives</h5>
+                  <p class="card-text mb-1">Dessin, 2024</p>
+                  <p class="card-text small text-muted">
+                    Fusain et graphite sur papier<br />30 x 40 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Photos -->
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item photo"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/photo clem.jpg"
+                    class="card-img-top gallery-img"
+                    alt="Photo 1"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="Instant Urbain"
+                      data-description="Photographie noir et blanc, 2024. Capture d'un moment fugace dans l'environnement urbain."
+                      data-materials="Impression sur papier Fine Art"
+                      data-dimensions="50 x 70 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Instant Urbain</h5>
+                  <p class="card-text mb-1">Photographie, 2024</p>
+                  <p class="card-text small text-muted">
+                    Impression sur papier Fine Art<br />50 x 70 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item photo"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/photo clem.jpg"
+                    class="card-img-top gallery-img"
+                    alt="Photo 1"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="Instant Urbain"
+                      data-description="Photographie noir et blanc, 2024. Capture d'un moment fugace dans l'environnement urbain."
+                      data-materials="Impression sur papier Fine Art"
+                      data-dimensions="50 x 70 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Instant Urbain</h5>
+                  <p class="card-text mb-1">Photographie, 2024</p>
+                  <p class="card-text small text-muted">
+                    Impression sur papier Fine Art<br />50 x 70 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item photo"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/photoclem3.jpg"
+                    class="card-img-top gallery-img"
+                    alt="Photo 1"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="Instant Urbain"
+                      data-description="Photographie noir et blanc, 2024. Capture d'un moment fugace dans l'environnement urbain."
+                      data-materials="Impression sur papier Fine Art"
+                      data-dimensions="50 x 70 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Instant Urbain</h5>
+                  <p class="card-text mb-1">Photographie, 2024</p>
+                  <p class="card-text small text-muted">
+                    Impression sur papier Fine Art<br />50 x 70 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item photo"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/photoclem2.jpg"
+                    class="card-img-top gallery-img"
+                    alt="Photo 1"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="Instant Urbain"
+                      data-description="Photographie noir et blanc, 2024. Capture d'un moment fugace dans l'environnement urbain."
+                      data-materials="Impression sur papier Fine Art"
+                      data-dimensions="50 x 70 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Instant Urbain</h5>
+                  <p class="card-text mb-1">Photographie, 2024</p>
+                  <p class="card-text small text-muted">
+                    Impression sur papier Fine Art<br />50 x 70 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sculptures -->
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 gallery-item sculpture"
+              data-aos="fade-up"
+            >
+              <div class="card h-100 gallery-card">
+                <div class="img-container position-relative overflow-hidden">
+                  <img
+                    src="img/sculpture clem.jpg"
+                    class="card-img-top gallery-img"
+                    alt="Sculpture 1"
+                  />
+                  <div
+                    class="overlay d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn btn-light btn-sm view-image"
+                      data-title="Équilibre"
+                      data-description="Sculpture en bronze sur socle en marbre, 2023. Une exploration des formes en équilibre."
+                      data-materials="Bronze et marbre"
+                      data-dimensions="H: 45 cm, L: 20 cm, P: 15 cm"
+                    >
+                      <i class="fas fa-search-plus"></i> Voir l'œuvre
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Équilibre</h5>
+                  <p class="card-text mb-1">Sculpture, 2023</p>
+                  <p class="card-text small text-muted">
+                    Bronze et marbre<br />H: 45 cm, L: 20 cm, P: 15 cm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Vous pouvez ajouter plus d'œuvres en suivant le même modèle -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal pour afficher les images en grand -->
+      <div
+        class="modal fade"
+        id="imageModal"
+        tabindex="-1"
+        aria-labelledby="imageModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content bg-dark text-light">
+            <div class="modal-header border-0">
+              <h5 class="modal-title fs-4" id="imageModalLabel">
+                Titre de l'œuvre
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row g-4">
+                <div class="col-md-8 text-center mb-3 mb-md-0">
+                  <img
+                    src=""
+                    id="modalImage"
+                    class="img-fluid rounded shadow"
+                    alt="Œuvre en plein écran"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <h6 class="border-bottom pb-2 text-warning">Description</h6>
+                  <p id="modalDescription">Description de l'œuvre</p>
+
+                  <h6 class="border-bottom pb-2 mt-4 text-warning">
+                    Caractéristiques
+                  </h6>
+                  <div class="mb-2">
+                    <strong>Matériaux:</strong>
+                    <span id="modalMaterials">Matériaux utilisés</span>
+                  </div>
+                  <div class="mb-3">
+                    <strong>Dimensions:</strong>
+                    <span id="modalDimensions">Dimensions de l'œuvre</span>
+                  </div>
+
+                  <a href="contact.html" class="btn btn-warning mt-4"
+                    >Demander plus d'informations</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Citation inspirante -->
+      <section class="py-5 bg-dark text-light">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8 text-center" data-aos="fade-up">
+              <blockquote class="blockquote">
+                <p>
+                  "L'art n'est pas ce que vous voyez, mais ce que vous faites
+                  voir aux autres."
+                </p>
+                <footer class="blockquote-footer text-warning">
+                  Edgar Degas
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Appel à l'action -->
+      <section class="py-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8 text-center" data-aos="fade-up">
+              <h3 class="mb-4">Intéressé par une œuvre?</h3>
+              <p>
+                N'hésitez pas à nous contacter pour plus d'informations sur les
+                œuvres disponibles ou pour organiser une visite.
+              </p>
+              <a href="contact.html" class="btn btn-warning text-uppercase"
+                >Contacter l'artiste</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer repris de la page "À propos" -->
+    <footer class="bg-black text-light py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 mb-3">
+            <h5 class="text-uppercase">Galerie Clément Nezzar</h5>
+            <p>
+              Artiste expressionniste contemporain<br />
+              Institut Supérieur des Beaux Arts de Besançon
+            </p>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <h5 class="text-uppercase">Liens</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-light">Accueil</a></li>
+              <li><a href="galerie.html" class="text-light">Galerie</a></li>
+              <li><a href="apropos.html" class="text-light">À propos</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <h5 class="text-uppercase">Suivez-nous</h5>
+            <div class="fs-3">
+              <a
+                href="https://www.instagram.com/clement_nezzark/"
+                class="text-light me-2"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-light me-2"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="text-light me-2"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-light"
+                ><i class="fab fa-pinterest"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12 text-center">
+            <p class="small">
+              &copy; 2025 Galerie Clément Nezzar. Tous droits réservés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
