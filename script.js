@@ -58,25 +58,19 @@ scrollTopBtn.addEventListener('click', () => {
     });
 });
 
-// Initialize AOS
+// Supprimer les animations AOS
 AOS.init({
-    duration: 1000,
-    offset: 100,
-    once: false,
-    mirror: true
+    disable: true
 });
 
-// Reset AOS animations when scrolling back to top
-let lastScrollTop = 0;
-window.addEventListener('scroll', () => {
-    const currentScrollTop = window.pageYOffset;
-    
-    // If scrolling up and past 100px
-    if (currentScrollTop < lastScrollTop && currentScrollTop < 100) {
-        AOS.refresh();
+// Supprimer l'animation du header au scroll
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
     }
-    
-    lastScrollTop = currentScrollTop;
 });
 
 // Smooth scroll pour les liens d'ancrage
@@ -91,28 +85,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
-});
-
-// Animation du header au scroll (plus rapide)
-let lastScroll = 0;
-const header = document.querySelector('.header');
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll <= 0) {
-        header.classList.remove('scroll-up');
-        return;
-    }
-    
-    if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
-        header.classList.remove('scroll-up');
-        header.classList.add('scroll-down');
-    } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-        header.classList.remove('scroll-down');
-        header.classList.add('scroll-up');
-    }
-    lastScroll = currentScroll;
 });
 
 // Technology Dropdown
