@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Réflexologie Faciale | Accueil</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <script src="script.js" defer></script>
+  <style>
+    /* Styles pour les animations de particules */
+    .particles-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      background-color: var(--color-accent);
+      opacity: 0.2;
+      border-radius: 50%;
+      animation: float 15s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) translateX(0) rotate(0);
+      }
+      25% {
+        transform: translateY(-30px) translateX(15px) rotate(90deg);
+      }
+      50% {
+        transform: translateY(-15px) translateX(30px) rotate(180deg);
+      }
+      75% {
+        transform: translateY(-45px) translateX(15px) rotate(270deg);
+      }
+      100% {
+        transform: translateY(0) translateX(0) rotate(360deg);
+      }
+    }
+
+    /* Styles pour le bouton scroll-to-top */
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.3s ease, transform 0.3s ease,
+        background-color 0.3s ease;
+      z-index: 100;
+      box-shadow: var(--shadow-md);
+    }
+
+    .scroll-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .scroll-top:hover {
+      background-color: var(--color-secondary);
+      transform: translateY(-5px);
+    }
+
+    /* Styles pour les animations de reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Styles pour le curseur personnalisé */
+    .cursor {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: rgba(93, 78, 76, 0.3);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      transition: width 0.3s, height 0.3s, background-color 0.3s;
+      mix-blend-mode: difference;
+    }
+
+    .cursor-follower {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--color-primary);
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9998;
+      transition: width 0.5s, height 0.5s, border-color 0.5s;
+      opacity: 0.5;
+    }
+
+    /* Effet de parallax */
+    .parallax {
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+  </style>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">Réflexo<span>Faciale</span></a>
+        </div>
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="about.html">À Propos</a></li>
+            <li><a href="services.html">Nos Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="burger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-nav">
+      <ul>
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="about.html">À Propos</a></li>
+        <li><a href="services.html">Nos Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Découvrez la <span>réflexologie faciale</span></h1>
+            <p>
+              Une approche naturelle pour votre bien-être et votre équilibre
+            </p>
+            <a href="services.html" class="btn">Nos services</a>
+          </div>
+          <div class="hero-image">
+            <div class="image-container">
+              <img
+                src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Réflexologie faciale"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits">
+        <div class="container">
+          <h2>Les bienfaits de la réflexologie faciale</h2>
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <div class="benefit-icon">🧠</div>
+              <h3>Réduit le stress</h3>
+              <p>Diminue l'anxiété et favorise une détente profonde.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">✨</div>
+              <h3>Améliore la peau</h3>
+              <p>Stimule la circulation et apporte éclat à votre peau.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">💆</div>
+              <h3>Soulage les tensions</h3>
+              <p>Libère les tensions musculaires et diminue les douleurs.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-preview">
+        <div class="container">
+          <div class="about-image">
+            <div class="image-container">
+              <img
+                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Notre approche"
+              />
+            </div>
+          </div>
+          <div class="about-content">
+            <h2>Notre approche holistique</h2>
+            <p>
+              Nous pratiquons une réflexologie faciale qui considère l'individu
+              dans sa globalité. Notre méthode combine techniques ancestrales et
+              connaissances modernes pour vous offrir un soin personnalisé.
+            </p>
+            <a href="about.html" class="btn-outline">En savoir plus</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <div class="container">
+          <h2>Ce que nos clients disent</h2>
+          <div class="testimonial-slider">
+            <div class="testimonial">
+              <p>
+                "Après plusieurs séances, mes migraines chroniques ont
+                considérablement diminué. Je me sens plus équilibrée et
+                détendue."
+              </p>
+              <div class="testimonial-author">Marie L.</div>
+            </div>
+            <div class="testimonial">
+              <p>
+                "Une expérience apaisante et revitalisante. Les résultats sont
+                visibles dès la première séance!"
+              </p>
+              <div class="testimonial-author">Thomas B.</div>
+            </div>
+            <div class="testimonial">
+              <p>
+                "J'apprécie particulièrement l'approche personnalisée et
+                l'écoute attentive à chaque rendez-vous."
+              </p>
+              <div class="testimonial-author">Sophie M.</div>
+            </div>
+          </div>
+          <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-info">
+            <div class="logo">Réflexo<span>Faciale</span></div>
+            <p>Votre bien-être est notre priorité</p>
+          </div>
+          <div class="footer-nav">
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="about.html">À Propos</a></li>
+              <li><a href="services.html">Nos Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact</h3>
+            <ul>
+              <li>📍 123 Rue du Bien-être, 75000 Paris</li>
+              <li>📞 01 23 45 67 89</li>
+              <li>✉️ contact@reflexofaciale.fr</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 RéflexoFaciale. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Réflexologie Faciale | Contact</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">Réflexo<span>Faciale</span></a>
+        </div>
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À Propos</a></li>
+            <li><a href="services.html">Nos Services</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="burger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">À Propos</a></li>
+        <li><a href="services.html">Nos Services</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <h1>Contactez-Nous</h1>
+          <p>
+            Prenez rendez-vous ou demandez-nous des informations complémentaires
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-form-container">
+              <h2>Envoyez-nous un message</h2>
+              <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                  <label for="name">Nom complet</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Téléphone</label>
+                  <input type="tel" id="phone" name="phone" />
+                </div>
+                <div class="form-group">
+                  <label for="service">Service souhaité</label>
+                  <select id="service" name="service">
+                    <option value="">Sélectionnez un service</option>
+                    <option value="relaxation">
+                      Séance Relaxation Profonde
+                    </option>
+                    <option value="antiage">Soin Anti-Âge Naturel</option>
+                    <option value="digestion">Équilibre Digestif</option>
+                    <option value="migraine">
+                      Soulagement Migraines & Céphalées
+                    </option>
+                    <option value="sleep">Amélioration du Sommeil</option>
+                    <option value="discovery">Séance Découverte</option>
+                    <option value="other">
+                      Autre (précisez dans le message)
+                    </option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Votre message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="checkbox-container">
+                    <input type="checkbox" name="consent" required />
+                    <span class="checkmark"></span>
+                    J'accepte que mes données soient utilisées pour me
+                    recontacter
+                  </label>
+                </div>
+                <button type="submit" class="btn">Envoyer</button>
+              </form>
+            </div>
+            <div class="contact-info-container">
+              <div class="contact-info">
+                <h2>Nos coordonnées</h2>
+                <div class="info-item">
+                  <div class="info-icon">📍</div>
+                  <div class="info-content">
+                    <h3>Adresse</h3>
+                    <p>123 Rue du Bien-être<br />75000 Paris, France</p>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">📞</div>
+                  <div class="info-content">
+                    <h3>Téléphone</h3>
+                    <p>01 23 45 67 89</p>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">✉️</div>
+                  <div class="info-content">
+                    <h3>Email</h3>
+                    <p>contact@reflexofaciale.fr</p>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">🕒</div>
+                  <div class="info-content">
+                    <h3>Horaires d'ouverture</h3>
+                    <p>
+                      Lundi - Vendredi: 9h - 19h<br />
+                      Samedi: 10h - 17h<br />
+                      Dimanche: Fermé
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="map-container">
+                <h3>Comment nous trouver</h3>
+                <div class="map">
+                  <!-- Une image de carte pour représentation -->
+                  <img
+                    src="https://maps.googleapis.com/maps/api/staticmap?center=Paris,France&zoom=14&size=600x300&markers=color:red%7CParis,France&key=YOUR_API_KEY"
+                    alt="Notre localisation sur la carte"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="appointment">
+        <div class="container">
+          <h2>Prendre rendez-vous par téléphone</h2>
+          <p>
+            Pour une prise de rendez-vous rapide ou des questions spécifiques,
+            n'hésitez pas à nous appeler
+          </p>
+          <a href="tel:0123456789" class="btn">01 23 45 67 89</a>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="container">
+          <h2>Questions Fréquentes</h2>
+          <div class="faq-grid">
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Comment se déroule la première séance ?</h3>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  La première séance commence par un bilan complet de votre état
+                  de santé et de vos attentes. Ensuite, nous procédons à une
+                  séance adaptée à vos besoins spécifiques. Un temps d'échange
+                  est prévu en fin de séance pour répondre à vos questions.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Quel moyen de paiement acceptez-vous ?</h3>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Nous acceptons les paiements par carte bancaire, espèces et
+                  chèques. Les forfaits peuvent être réglés en plusieurs fois
+                  selon vos besoins.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Peut-on annuler ou reporter un rendez-vous ?</h3>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Oui, vous pouvez annuler ou reporter un rendez-vous jusqu'à
+                  24h avant l'heure prévue sans frais. Passé ce délai, la séance
+                  sera due ou décomptée de votre forfait.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-info">
+            <div class="logo">Réflexo<span>Faciale</span></div>
+            <p>Votre bien-être est notre priorité</p>
+          </div>
+          <div class="footer-nav">
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="about.html">À Propos</a></li>
+              <li><a href="services.html">Nos Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact</h3>
+            <ul>
+              <li>📍 123 Rue du Bien-être, 75000 Paris</li>
+              <li>📞 01 23 45 67 89</li>
+              <li>✉️ contact@reflexofaciale.fr</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 RéflexoFaciale. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
