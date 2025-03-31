@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vente de matériels informatiques de qualité - Solutions professionnelles pour tous vos besoins technologiques"
+    />
+    <title>TechPro - Matériel Informatique</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="light-theme">
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="./logo/logo-techpro.png" alt="TechPro Logo" />
+        </div>
+        <nav>
+          <div class="burger-menu">
+            <div class="burger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <ul class="nav-links">
+            <li class="close-btn-container">
+              <button class="close-btn" aria-label="Fermer le menu">
+                <span></span>
+                <span></span>
+              </button>
+            </li>
+            <li><a href="#accueil" class="active">Accueil</a></li>
+            <li><a href="#a-propos">À Propos</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="theme-toggle-item">
+              <button id="theme-toggle-btn" aria-label="Changer de thème">
+                <i class="fas fa-moon"></i>
+              </button>
+              <span class="theme-label">Changer de thème</span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Section Accueil -->
+      <section id="accueil" class="hero">
+        <div class="video-background">
+          <video autoplay muted loop playsinline>
+            <source
+              src="https://cdn.pixabay.com/vimeo/328224054/technology-23990.mp4?width=1280&hash=f4aa2c9a86e1a263e05371b8ecc2a364ec465048"
+              type="video/mp4"
+            />
+            <!-- Vidéo alternative au cas où la première ne se charge pas -->
+            <source
+              src="https://cdn.pixabay.com/vimeo/372199574/abstract-39558.mp4?width=1280&hash=edc49c26e164d6d80a8a009f88d972a82d23c146"
+              type="video/mp4"
+            />
+            <!-- Fallback pour les navigateurs qui ne supportent pas la vidéo -->
+            Votre navigateur ne supporte pas la lecture vidéo.
+          </video>
+          <div class="video-overlay"></div>
+        </div>
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1>Solutions Informatiques Professionnelles</h1>
+              <p>
+                Équipement, services et conseils pour optimiser votre
+                infrastructure technologique
+              </p>
+              <div class="hero-cta">
+                <a href="#services" class="btn primary-btn"
+                  >Découvrir nos services</a
+                >
+                <a href="#contact" class="btn secondary-btn"
+                  >Demander un devis</a
+                >
+              </div>
+            </div>
+            <div class="hero-image">
+              <img
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80"
+                alt="Solutions informatiques professionnelles"
+              />
+            </div>
+          </div>
+          <div class="hero-features">
+            <div class="feature">
+              <div class="feature-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="feature-text">
+                <h3>Solutions Sécurisées</h3>
+                <p>Protection complète de vos systèmes</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <div class="feature-text">
+                <h3>Support Expert</h3>
+                <p>Assistance technique professionnelle</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="feature-text">
+                <h3>Performance Optimale</h3>
+                <p>Matériel sélectionné pour ses performances</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section À Propos -->
+      <section id="a-propos" class="about">
+        <div class="container">
+          <div class="section-header">
+            <h2>À Propos de Nous</h2>
+            <div class="separator"></div>
+          </div>
+          <div class="about-content">
+            <div class="about-text">
+              <h3>Votre Partenaire Technologique</h3>
+              <p>
+                Depuis plus de 10 ans, TechPro est votre référence en matière
+                d'équipement informatique. Notre expertise nous permet de vous
+                offrir des solutions adaptées à vos besoins spécifiques.
+              </p>
+              <p>
+                Nous sélectionnons rigoureusement chaque produit pour garantir
+                fiabilité et performance, tout en restant à la pointe de
+                l'innovation technologique.
+              </p>
+              <ul class="about-list">
+                <li>
+                  <i class="fas fa-check-circle"></i> Matériel certifié et
+                  garanti
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Conseil personnalisé
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Service après-vente
+                  réactif
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Solutions sur mesure
+                </li>
+              </ul>
+            </div>
+            <div class="about-image">
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+                alt="Notre équipe d'experts"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Services -->
+      <section id="services" class="services">
+        <div class="container">
+          <div class="section-header">
+            <h2>Nos Services</h2>
+            <div class="separator"></div>
+          </div>
+          <div class="services-grid">
+            <figure class="service-card" data-service="materiel">
+              <div class="img-container">
+                <img
+                  src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  alt="Vente de Matériel"
+                />
+              </div>
+              <figcaption>
+                <div class="service-icon">
+                  <i class="fas fa-laptop"></i>
+                </div>
+                <h3>Vente de Matériel</h3>
+                <p>
+                  Ordinateurs, périphériques et composants sélectionnés pour
+                  leur qualité et performances.
+                </p>
+              </figcaption>
+            </figure>
+            <figure class="service-card" data-service="maintenance">
+              <div class="img-container">
+                <img
+                  src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  alt="Maintenance"
+                />
+              </div>
+              <figcaption>
+                <div class="service-icon">
+                  <i class="fas fa-tools"></i>
+                </div>
+                <h3>Maintenance</h3>
+                <p>
+                  Entretien préventif et réparation de votre parc informatique
+                  par nos techniciens qualifiés.
+                </p>
+              </figcaption>
+            </figure>
+            <figure class="service-card" data-service="reseau">
+              <div class="img-container">
+                <img
+                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  alt="Solutions Réseau"
+                />
+              </div>
+              <figcaption>
+                <div class="service-icon">
+                  <i class="fas fa-network-wired"></i>
+                </div>
+                <h3>Solutions Réseau</h3>
+                <p>
+                  Configuration et optimisation de votre infrastructure réseau
+                  pour une connectivité optimale.
+                </p>
+              </figcaption>
+            </figure>
+            <figure class="service-card" data-service="securite">
+              <div class="img-container">
+                <img
+                  src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  alt="Sécurité IT"
+                />
+              </div>
+              <figcaption>
+                <div class="service-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Sécurité IT</h3>
+                <p>
+                  Protection de vos données et systèmes contre les menaces
+                  informatiques modernes.
+                </p>
+              </figcaption>
+            </figure>
+            <figure class="service-card" data-service="cloud">
+              <div class="img-container">
+                <img
+                  src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  alt="Solutions Cloud"
+                />
+              </div>
+              <figcaption>
+                <div class="service-icon">
+                  <i class="fas fa-cloud"></i>
+                </div>
+                <h3>Solutions Cloud</h3>
+                <p>
+                  Migration et gestion de vos services dans le cloud pour plus
+                  de flexibilité.
+                </p>
+              </figcaption>
+            </figure>
+            <figure class="service-card" data-service="support">
+              <div class="img-container">
+                <img
+                  src="https://images.unsplash.com/photo-1545161296-d9c2c9f607fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  alt="Support Technique"
+                />
+              </div>
+              <figcaption>
+                <div class="service-icon">
+                  <i class="fas fa-headset"></i>
+                </div>
+                <h3>Support Technique</h3>
+                <p>
+                  Assistance et dépannage rapide pour minimiser les
+                  interruptions de service.
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fenêtres modales pour les services -->
+      <div class="modal-container" id="modal-materiel">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Vente de Matériel</h2>
+          <div class="modal-body">
+            <img
+              src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              alt="Vente de Matériel"
+            />
+            <div class="modal-text">
+              <h3>Des équipements performants pour tous vos besoins</h3>
+              <p>
+                Nous proposons une large gamme d'ordinateurs, de périphériques
+                et de composants informatiques sélectionnés pour leur qualité et
+                leurs performances.
+              </p>
+              <h4>Notre offre comprend :</h4>
+              <ul>
+                <li>
+                  <strong>Ordinateurs de bureau et portables</strong> - Des
+                  solutions adaptées à tous les usages professionnels
+                </li>
+                <li>
+                  <strong>Serveurs et solutions de stockage</strong> - Pour
+                  gérer efficacement vos données
+                </li>
+                <li>
+                  <strong>Périphériques</strong> - Écrans, imprimantes,
+                  accessoires de qualité professionnelle
+                </li>
+                <li>
+                  <strong>Composants</strong> - Pour l'assemblage ou la mise à
+                  niveau de vos machines
+                </li>
+              </ul>
+              <p>
+                Notre équipe d'experts vous conseille dans le choix du matériel
+                le plus adapté à vos besoins spécifiques, en tenant compte de
+                vos contraintes techniques et budgétaires.
+              </p>
+              <a href="#contact" class="btn primary-btn modal-btn"
+                >Demander un devis</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-container" id="modal-maintenance">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Maintenance Informatique</h2>
+          <div class="modal-body">
+            <img
+              src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              alt="Maintenance"
+            />
+            <div class="modal-text">
+              <h3>Une maintenance proactive pour éviter les pannes</h3>
+              <p>
+                Nos techniciens certifiés assurent l'entretien préventif et la
+                réparation de votre parc informatique pour garantir son
+                fonctionnement optimal.
+              </p>
+              <h4>Nos services de maintenance incluent :</h4>
+              <ul>
+                <li>
+                  <strong>Maintenance préventive</strong> - Détection et
+                  résolution des problèmes avant qu'ils n'affectent votre
+                  productivité
+                </li>
+                <li>
+                  <strong>Dépannage rapide</strong> - Intervention sur site ou à
+                  distance en cas de panne
+                </li>
+                <li>
+                  <strong>Mise à jour logicielle</strong> - Installation des
+                  dernières versions et correctifs de sécurité
+                </li>
+                <li>
+                  <strong>Contrats de maintenance personnalisés</strong> -
+                  Adaptés à la taille et aux besoins de votre entreprise
+                </li>
+              </ul>
+              <p>
+                Avec nos services de maintenance, vous bénéficiez d'un suivi
+                régulier de votre infrastructure et réduisez considérablement
+                les risques d'interruption de service.
+              </p>
+              <a href="#contact" class="btn primary-btn modal-btn"
+                >Demander un devis</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-container" id="modal-reseau">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Solutions Réseau</h2>
+          <div class="modal-body">
+            <img
+              src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              alt="Solutions Réseau"
+            />
+            <div class="modal-text">
+              <h3>Des infrastructures réseau performantes et sécurisées</h3>
+              <p>
+                Nous concevons, déployons et maintenons des solutions réseau sur
+                mesure pour optimiser la connectivité et les performances de
+                votre entreprise.
+              </p>
+              <h4>Notre expertise réseau couvre :</h4>
+              <ul>
+                <li>
+                  <strong>Conception d'architecture réseau</strong> - Création
+                  de solutions adaptées à vos besoins spécifiques
+                </li>
+                <li>
+                  <strong>Installation et configuration</strong> - Mise en place
+                  de l'infrastructure physique et logique
+                </li>
+                <li>
+                  <strong>Sécurisation du réseau</strong> - Protection contre
+                  les intrusions et accès non autorisés
+                </li>
+                <li>
+                  <strong>Solutions Wi-Fi professionnelles</strong> - Pour une
+                  mobilité optimale dans vos locaux
+                </li>
+                <li>
+                  <strong>Supervision et maintenance</strong> - Pour garantir
+                  les performances et la disponibilité
+                </li>
+              </ul>
+              <p>
+                Nos ingénieurs réseau certifiés vous accompagnent pour créer une
+                infrastructure fiable, évolutive et performante.
+              </p>
+              <a href="#contact" class="btn primary-btn modal-btn"
+                >Demander un devis</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-container" id="modal-securite">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Sécurité IT</h2>
+          <div class="modal-body">
+            <img
+              src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              alt="Sécurité IT"
+            />
+            <div class="modal-text">
+              <h3>Protection complète de votre environnement informatique</h3>
+              <p>
+                Nous proposons des solutions de sécurité adaptées pour protéger
+                efficacement vos données et systèmes contre les menaces
+                informatiques actuelles.
+              </p>
+              <h4>Notre offre de sécurité comprend :</h4>
+              <ul>
+                <li>
+                  <strong>Audit de sécurité</strong> - Identification des
+                  vulnérabilités de votre système
+                </li>
+                <li>
+                  <strong>Protection des endpoints</strong> - Sécurisation de
+                  tous vos appareils
+                </li>
+                <li>
+                  <strong>Pare-feu nouvelle génération</strong> - Filtrage
+                  avancé du trafic réseau
+                </li>
+                <li>
+                  <strong>Solutions anti-malware</strong> - Protection contre
+                  les virus, ransomwares et autres menaces
+                </li>
+                <li>
+                  <strong>Formation et sensibilisation</strong> - Pour vos
+                  collaborateurs
+                </li>
+              </ul>
+              <p>
+                Notre approche de la sécurité est préventive et proactive pour
+                anticiper les menaces avant qu'elles n'impactent votre activité.
+              </p>
+              <a href="#contact" class="btn primary-btn modal-btn"
+                >Demander un devis</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-container" id="modal-cloud">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Solutions Cloud</h2>
+          <div class="modal-body">
+            <img
+              src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              alt="Solutions Cloud"
+            />
+            <div class="modal-text">
+              <h3>Migration et gestion de vos services dans le cloud</h3>
+              <p>
+                Nous vous accompagnons dans votre transition vers le cloud pour
+                plus de flexibilité, de mobilité et d'efficacité opérationnelle.
+              </p>
+              <h4>Nos services cloud incluent :</h4>
+              <ul>
+                <li>
+                  <strong>Conseil et stratégie cloud</strong> - Définition de la
+                  meilleure approche pour votre entreprise
+                </li>
+                <li>
+                  <strong>Migration vers le cloud</strong> - Transfert sécurisé
+                  de vos applications et données
+                </li>
+                <li>
+                  <strong>Cloud hybride</strong> - Combinaison optimale entre
+                  infrastructure locale et cloud
+                </li>
+                <li>
+                  <strong>SaaS, PaaS, IaaS</strong> - Déploiement des services
+                  adaptés à vos besoins
+                </li>
+                <li>
+                  <strong>Optimisation des coûts</strong> - Pour maîtriser votre
+                  budget IT
+                </li>
+              </ul>
+              <p>
+                Nos experts cloud vous aident à tirer pleinement parti des
+                avantages du cloud tout en sécurisant vos données et en
+                optimisant vos coûts.
+              </p>
+              <a href="#contact" class="btn primary-btn modal-btn"
+                >Demander un devis</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-container" id="modal-support">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Support Technique</h2>
+          <div class="modal-body">
+            <img
+              src="https://images.unsplash.com/photo-1545161296-d9c2c9f607fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              alt="Support Technique"
+            />
+            <div class="modal-text">
+              <h3>Assistance et dépannage rapide</h3>
+              <p>
+                Notre équipe de support technique est à votre disposition pour
+                résoudre rapidement tous vos problèmes informatiques et
+                minimiser les interruptions de service.
+              </p>
+              <h4>Notre support technique comprend :</h4>
+              <ul>
+                <li>
+                  <strong>Helpdesk</strong> - Support de premier niveau pour la
+                  résolution des incidents courants
+                </li>
+                <li>
+                  <strong>Support sur site</strong> - Intervention dans vos
+                  locaux pour les problèmes complexes
+                </li>
+                <li>
+                  <strong>Support à distance</strong> - Résolution rapide sans
+                  déplacement
+                </li>
+                <li>
+                  <strong>Assistance 24/7</strong> - Pour les infrastructures
+                  critiques
+                </li>
+                <li>
+                  <strong>Suivi et reporting</strong> - Analyse des incidents
+                  pour amélioration continue
+                </li>
+              </ul>
+              <p>
+                Nos techniciens expérimentés sont formés pour répondre
+                efficacement à tous vos besoins d'assistance technique, avec des
+                temps de réponse garantis.
+              </p>
+              <a href="#contact" class="btn primary-btn modal-btn"
+                >Demander un devis</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Contact/Devis -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="section-header">
+            <h2>Demande de Devis</h2>
+            <div class="separator"></div>
+          </div>
+          <div class="contact-container">
+            <div class="contact-info">
+              <h3>Restons en Contact</h3>
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>123 Avenue de la Technologie, 75000 Paris</p>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <p>+33 1 23 45 67 89</p>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <p>contact@techpro.fr</p>
+              </div>
+              <div class="social-links">
+                <a href="#" aria-label="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" aria-label="LinkedIn"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+            <div class="contact-form">
+              <form id="devis-form">
+                <div class="form-group">
+                  <label for="nom">Nom Complet</label>
+                  <input type="text" id="nom" name="nom" required />
+                  <div class="error-message"></div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required />
+                  <div class="error-message"></div>
+                </div>
+                <div class="form-group">
+                  <label for="telephone">Téléphone</label>
+                  <input type="tel" id="telephone" name="telephone" />
+                  <div class="error-message"></div>
+                </div>
+                <div class="form-group">
+                  <label for="service">Service Souhaité</label>
+                  <select id="service" name="service" required>
+                    <option value="">Sélectionnez un service</option>
+                    <option value="materiel">Achat de Matériel</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="reseau">Solutions Réseau</option>
+                    <option value="securite">Sécurité IT</option>
+                    <option value="cloud">Solutions Cloud</option>
+                    <option value="support">Support Technique</option>
+                  </select>
+                  <div class="error-message"></div>
+                </div>
+                <div class="form-group">
+                  <label for="message">Détails de Votre Projet</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                  ></textarea>
+                  <div class="error-message"></div>
+                </div>
+                <button type="submit" class="btn primary-btn submit-btn">
+                  <span>Envoyer</span>
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>TechPro</h2>
+            <p>Votre partenaire informatique de confiance</p>
+          </div>
+          <div class="footer-links">
+            <h3>Liens Rapides</h3>
+            <ul>
+              <li><a href="#accueil">Accueil</a></li>
+              <li><a href="#a-propos">À Propos</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Restez informé de nos dernières offres</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Votre email" required />
+              <button type="submit"><i class="fas fa-arrow-right"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 TechPro. Tous droits réservés.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Conditions d'utilisation</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#accueil" class="back-to-top" aria-label="Retour en haut">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
